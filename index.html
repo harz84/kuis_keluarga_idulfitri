@@ -207,10 +207,10 @@
 
     <div id="gameArea">
         <div id="startScreen" class="fade-in-up">
-            <h1 id="judulGame">Kuis Ngabuburit<br>  Edisi Khusus Idul Fitri 1447 H</h1>
-            <p id="petunjuk" style="font-size: 16px;">Uji pengetahuan Islam kamu sambil menunggu waktu berbuka puasa!</p>
+            <h1 id="judulGame">Kuis Keluarga Ronald<br>  Edisi Idul Fitri 1447 H</h1>
+            <p id="petunjuk" style="font-size: 16px;">Yuk uji pengetahuanmu tentang keluarga Ronald!</p>
             
-            <input type="text" id="namaPeserta" placeholder="Ketik Nama (misal: Gibran)"><br>
+            <input type="text" id="namaPeserta" placeholder="Ketik Nama (Misal: Bahlil)"><br>
             <button id="startButton">Mulai Kuis</button>
             <p id="bismillah">﷽</p>
         </div>
@@ -245,79 +245,79 @@
         // --- SOAL TERBARU ---
         const dataTebakan = [
             { 
-                deskripsi: "Sunnah yang sangat dianjurkan oleh Nabi ﷺ sebelum berangkat ke tempat shalat Idul Fitri adalah...", 
-                jawaban: "Makan kurma dalam jumlah yang ganjil", 
-                pilihan: ["Berpuasa setengah hari hingga selesai shalat", "Makan kurma dalam jumlah yang ganjil", "Minum air zam-zam dan segelas susu", "Bersedekah makanan kepada tetangga"] 
+                deskripsi: "Ibu papa Ronald berasal dari daerah...", 
+                jawaban: "Purworejo", 
+                pilihan: ["Kutoarjo", "Purworejo", "Klaten", "Kebumen"] 
             },
             { 
-                deskripsi: "Bagaimana hukum melaksanakan ibadah puasa bertepatan pada tanggal 1 Syawal (Hari Raya Idul Fitri)?", 
-                jawaban: "Haram dan puasanya tidak dinilai sah", 
-                pilihan: ["Sunnah bagi yang tidak ikut shalat Id", "Mubah jika tujuannya membayar qadha", "Makruh karena ini adalah hari kemenangan", "Haram dan puasanya tidak dinilai sah"] 
+                deskripsi: "Nenek Wasnida lahir di kota...", 
+                jawaban: "Bukittinggi", 
+                pilihan: ["Padang", "Bukittinggi", "Solok", "Payakumbuh"] 
             },
             { 
-                deskripsi: "Saat berangkat menuju dan pulang dari tempat shalat Idul Fitri, kaum muslimin disunnahkan untuk...", 
-                jawaban: "Melewati rute jalan yang berbeda arah", 
-                pilihan: ["Berjalan beriringan di belakang imam", "Melewati rute jalan yang sama persis", "Melewati rute jalan yang berbeda arah", "Menggunakan kendaraan yang terbaik"] 
+                deskripsi: "Usia Nenek sekarang adalah...", 
+                jawaban: "75 tahun", 
+                pilihan: ["74 tahun", "75 tahun", "76 tahun", "72 tahun"] 
             },
             { 
-                deskripsi: "Bagaimana petunjuk syariat bagi wanita yang sedang dalam keadaan haid saat hari raya Idul Fitri tiba?", 
-                jawaban: "Hadir di lapangan tapi menjauh dari shaf shalat", 
-                pilihan: ["Wajib berdiam diri di dalam area kamarnya", "Boleh ke masjid asal memakai hijab rapat", "Hadir di lapangan tapi menjauh dari shaf shalat", "Ikut shalat Idul Fitri tanpa kewajiban wudhu"] 
+                deskripsi: "Selisih usia antara Opa dan Nenek adalah...", 
+                jawaban: "4 tahun", 
+                pilihan: ["3 tahun", "4 tahun", "5 tahun", "6 tahun"] 
             },
             { 
-                deskripsi: "Kapan waktu yang paling tepat dimulainya kumandang takbir (takbiran) untuk menyambut Idul Fitri?", 
-                jawaban: "Sejak terbenam matahari di malam 1 Syawal", 
-                pilihan: ["Setelah shalat Ashar di hari terakhir Ramadhan", "Sejak terbenam matahari di malam 1 Syawal", "Saat masuk pertengahan malam tanggal 1 Syawal", "Pagi hari saat berjalan menuju tempat shalat Id"] 
+                deskripsi: "Opa lahir di kota...", 
+                jawaban: "Bandung", 
+                pilihan: ["Depok", "Padang", "Bandung", "Kutoarjo"] 
             },
             { 
-                deskripsi: "Apa anjuran sunnah terkait pakaian yang dikenakan saat berangkat menunaikan shalat Idul Fitri?", 
-                jawaban: "Memakai pakaian paling bagus yang dimiliki", 
-                pilihan: ["Wajib memakai pakaian baru yang belum dipakai", "Mengenakan pakaian berwarna putih polos bersih", "Memakai pakaian paling bagus yang dimiliki", "Memakai pakaian seragam agar terlihat kompak"] 
+                deskripsi: "Opa dan Nenek pertama kali bertemu di kota...", 
+                jawaban: "Padang", 
+                pilihan: ["Bandung", "Padang", "Bukittinggi", "Jakarta"] 
             },
             { 
-                deskripsi: "Berdasarkan praktik Rasulullah ﷺ, di manakah tempat yang paling afdhal untuk melaksanakan shalat Idul Fitri?", 
-                jawaban: "Di tanah lapang atau mushalla pada ruang terbuka", 
-                pilihan: ["Di dalam Masjid Nabawi yang penuh dengan berkah", "Di masjid jami' terbesar yang ada di pusat kota", "Di tanah lapang atau mushalla pada ruang terbuka", "Di pelataran Ka'bah bagi penduduk sekitar Makkah"] 
+                deskripsi: "Saudara perempuan Nenek berjumlah… orang", 
+                jawaban: "4", 
+                pilihan: ["2", "3", "4", "5"] 
             },
             { 
-                deskripsi: "Jika shalat Idul Fitri dilaksanakan di tanah lapang, bagaimana hukum shalat sunnah qabliyah (sebelum shalat Id)?", 
-                jawaban: "Tidak disyariatkan sama sekali (tidak ada)", 
-                pilihan: ["Sunnah muakkadah sebanyak dua rakaat", "Wajib sebagai pengganti Tahiyatul Masjid", "Makruh jika dilakukan secara berjamaah", "Tidak disyariatkan sama sekali (tidak ada)"] 
+                deskripsi: "Saudara laki-laki Nenek berjumlah… orang", 
+                jawaban: "1", 
+                pilihan: ["1", "2", "3", "4"] 
             },
             { 
-                deskripsi: "Seseorang datang terlambat ke lapangan dan mendapati imam sudah selesai shalat Idul Fitri. Apa yang harus dilakukannya?", 
-                jawaban: "Duduk mendengarkan khutbah, lalu qadha shalat 2 rakaat", 
-                pilihan: ["Langsung pulang karena waktu shalat Id sudah habis", "Duduk mendengarkan khutbah, lalu qadha shalat 2 rakaat", "Shalat sunnah Dhuha empat rakaat di lapangan tersebut", "Meminta imam untuk mengulang shalat khusus untuknya"] 
+                deskripsi: "Jumlah cucu Opa dan Nenek keseluruhannya ada ….. orang", 
+                jawaban: "9", 
+                pilihan: ["7", "8", "9", "10"] 
             },
             { 
-                deskripsi: "Barangsiapa berpuasa Ramadhan lalu mengikutinya dengan puasa enam hari di bulan Syawal, maka pahalanya seperti...", 
-                jawaban: "Berpuasa selama satu tahun penuh", 
-                pilihan: ["Berpuasa selama satu tahun penuh", "Memerdekakan seribu orang budak", "Berhaji dan umrah secara sempurna", "Menghidupkan malam Lailatul Qadar"] 
+                deskripsi: "Nama ibu dari Nenek Wasnida adalah...", 
+                jawaban: "Ummama", 
+                pilihan: ["Ummi", "Ummama", "Ammi", "Ammah"] 
             },
             { 
-                deskripsi: "Bagaimanakah tata cara pelaksanaan puasa sunnah enam hari di bulan Syawal yang diperbolehkan dalam syariat?", 
-                jawaban: "Boleh dilakukan berurutan atau terpisah-pisah", 
-                pilihan: ["Wajib dilakukan secara berurutan tanpa jeda", "Boleh dilakukan berurutan atau terpisah-pisah", "Harus dilakukan pada pertengahan bulan (Ayyamul Bidh)", "Wajib dilakukan tepat pada tanggal 2 hingga 7 Syawal"] 
+                deskripsi: "Tahun berapakah cucu nenek Hafeezha lahir?", 
+                jawaban: "2020", 
+                pilihan: ["2019", "2020", "2021", "2022"] 
             },
             { 
-                deskripsi: "Jika seseorang memiliki utang (qadha) puasa Ramadhan, manakah yang lebih utama untuk dikerjakan terlebih dahulu di bulan Syawal?", 
-                jawaban: "Qadha puasa Ramadhan dahulu, baru puasa Syawal", 
-                pilihan: ["Puasa Syawal dahulu, lalu qadha di bulan lainnya", "Qadha puasa Ramadhan dahulu, baru puasa Syawal", "Menggabungkan kedua niat puasa di dalam satu hari", "Membayar fidyah saja sebagai ganti qadha puasanya"] 
+                deskripsi: "Opa memiliki 4 orang anak. Anak Opa yang nomor 3 bernama...", 
+                jawaban: "Yossi", 
+                pilihan: ["Reny", "Vika", "Yossi", "Dani"] 
             },
             { 
-                deskripsi: "Manakah di antara kerabat wanita berikut ini yang bukan termasuk mahram (boleh dinikahi) bagi seorang laki-laki?", 
-                jawaban: "Anak perempuan dari paman atau bibi (Sepupu)", 
-                pilihan: ["Bibi kandung dari jalur pihak ibu (Khalah)", "Bibi kandung dari jalur pihak ayah (Ammah)", "Anak perempuan dari paman atau bibi (Sepupu)", "Keponakan perempuan dari jalur saudara kandung"] 
+                deskripsi: "Kalimat syahadat 'La ilaha illallah' berarti meyakini bahwa Allah adalah satu-satunya…. yang benar", 
+                jawaban: "Sesembahan", 
+                pilihan: ["Pencipta", "Sesembahan", "Penguasa", "Pengatur"] 
             },
             { 
-                deskripsi: "Di antara seorang laki-laki dan kerabat wanita yang berstatus bukan mahram (seperti sepupu), maka syariat memperbolehkan keduanya untuk...", 
-                jawaban: "Melangsungkan akad nikah satu sama lainnya", 
-                pilihan: ["Bersalaman secara langsung saat momen Idul Fitri", "Melangsungkan akad nikah satu sama lainnya", "Berdua-duaan (khalwat) di dalam sebuah ruangan tertutup", "Melepas hijab karena masih terhitung keluarga besar"] 
+                deskripsi: "Idul Fitri secara harfiah (bahasa) artinya...", 
+                jawaban: "Kembali berbuka", 
+                pilihan: ["Kembali berbuka", "Kembali suci", "Kembali bersih", "Kembali mulia"] 
             },
             { 
-                deskripsi: "Bagaimanakah status hukum saudara kandung suami (kakak/adik ipar laki-laki) bagi seorang istri di dalam rumah?", 
-                jawaban: "Bukan mahram, bahkan Nabi ﷺ menyebut ipar sebagai \"maut\" karena sangat rawan fitnah", 
-                pilihan: ["Ia adalah mahram selamanya sehingga sang istri boleh melepas hijab di depannya", "Ia adalah mahram sementara sehingga istri boleh bersalaman dan bepergian dengannya", "Bukan mahram, bahkan Nabi ﷺ menyebut ipar sebagai \"maut\" karena sangat rawan fitnah", "Bukan mahram, namun istri tidak diwajibkan menutup aurat secara sempurna di depannya"] 
+                deskripsi: "Saat berwudhu dan membasuh kaki, salah satu hal berikut ini sifatnya tidak wajib (bukan rukun), yaitu...", 
+                jawaban: "Membasuh kaki hingga lutut", 
+                pilihan: ["Menyela jari-jari kaki dengan kelingking", "Membasuh kaki hingga mata kaki", "Membasuh kaki hingga lutut", "Mendahulukan kaki kanan atas kaki kiri"] 
             }
         ];
 
@@ -466,9 +466,9 @@
             const skorAkhir = totalSoal > 0 ? (skorBenar / totalSoal) * 100 : 0;
             let warnaSkor, komentar, gameOverSoundFile;
 
-            if (skorAkhir < 50) { gameOverSoundFile = 'ast.mp3'; komentar = "Belajar lagi ya.... 😊📚<br>Admin mengucapkan selamat Idul Fitri 1447 H, <br>Taqabbalallahu Minna Waminkum <br>Sampai jumpa lagi tahun depan Insya Allah 🤗"; warnaSkor = "#ff6b6b"; }
-else if (skorAkhir <= 84) { gameOverSoundFile = 'alh.mp3'; komentar = "Alhamdulillah, Mantap! 👍<br>Admin mengucapkan selamat Idul Fitri 1447 H, <br>Taqabbalallahu Minna Waminkum<br>Sampai jumpa lagi tahun depan Insya Allah 🤗"; warnaSkor = "#F5D061"; }
-else { gameOverSoundFile = 'masy.mp3'; komentar = "MasyaAllah, Kamu Luar Biasa! 🌟🏆<br>Admin mengucapkan selamat Idul Fitri 1447 H, <br>Taqabbalallahu Minna Waminkum<br>Sampai jumpa lagi tahun depan Insya Allah 🤗"; warnaSkor = "#51cf66"; }
+            if (skorAkhir < 50) { gameOverSoundFile = 'ast.mp3'; komentar = "Astaghfirullah....Kamu harus banyak ngobrol lagi sama nenek"; warnaSkor = "#ff6b6b"; }
+else if (skorAkhir <= 84) { gameOverSoundFile = 'alh.mp3'; komentar = "Alhamdulillah, Lumayan Lah"; warnaSkor = "#F5D061"; }
+else { gameOverSoundFile = 'masy.mp3'; komentar = "MasyaAllah, Kamu Anggota Keluarga Ronald Sejati! "; warnaSkor = "#51cf66"; }
 
             document.getElementById("judulGameAktif").textContent = "Kuis Selesai!";
             document.getElementById("timerContainer").style.display = "none";
