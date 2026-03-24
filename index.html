@@ -149,7 +149,6 @@
         }
         #startButton:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(245, 208, 97, 0.6); }
 
-        /* Teks Bismillah kembali ke versi standar, aman untuk HP */
         #bismillah { 
             font-size: 50px; 
             font-size: clamp(26px, 10vw, 50px); 
@@ -193,9 +192,7 @@
             #timer { font-size: 22px; }
             #timerIcon { width: 20px; height: 20px; }
             
-            /* Penyesuaian ukuran bismillah di HP */
             #bismillah { font-size: 26px; }
-            /* #bismillah { font-size: 26px; } */
         }
     </style>
 </head>
@@ -207,8 +204,8 @@
 
     <div id="gameArea">
         <div id="startScreen" class="fade-in-up">
-            <h1 id="judulGame">Kuis Keluarga Ronald<br>  Edisi Idul Fitri 1447 H</h1>
-            <p id="petunjuk" style="font-size: 16px;">Yuk uji pengetahuanmu tentang keluarga Ronald!</p>
+            <h1 id="judulGame">Kuis Keluarga Muhtadi<br> Edisi Idul Fitri 1447 H</h1>
+            <p id="petunjuk" style="font-size: 16px;">Yuk uji pengetahuanmu tentang keluarga Muhtadi!</p>
             
             <input type="text" id="namaPeserta" placeholder="Ketik Nama (Misal: Bahlil)"><br>
             <button id="startButton">Mulai Kuis</button>
@@ -245,69 +242,34 @@
         // --- SOAL TERBARU ---
         const dataTebakan = [
             { 
-                deskripsi: "Ibu papa Ronald berasal dari daerah...", 
-                jawaban: "Purworejo", 
-                pilihan: ["Kutoarjo", "Purworejo", "Klaten", "Kebumen"] 
+                deskripsi: "Siapa nama istri Mbah Kaum Kambali?", 
+                jawaban: "Syarifah", 
+                pilihan: ["Salamah", "Syarifah", "Siti Aisyah", "Fatimah"] 
             },
             { 
-                deskripsi: "Nenek Wasnida lahir di kota...", 
-                jawaban: "Bukittinggi", 
-                pilihan: ["Padang", "Bukittinggi", "Solok", "Payakumbuh"] 
+                deskripsi: "Nama bapak dari Mbah Muhtadi adalah...", 
+                jawaban: "Ahmad Pandi", 
+                pilihan: ["Hasan Besari", "Ahmad Pandi", "Rowi", "Haji Thoha"] 
             },
             { 
-                deskripsi: "Usia Nenek sekarang adalah...", 
-                jawaban: "75 tahun", 
-                pilihan: ["74 tahun", "75 tahun", "76 tahun", "72 tahun"] 
+                deskripsi: "Nama saudara kandung dari Mbah Muhtadi adalah...", 
+                jawaban: "Rowi", 
+                pilihan: ["Hasan Besari", "Ahmad Pandi", "Rowi", "Haji Thoha"] 
             },
             { 
-                deskripsi: "Selisih usia antara Opa dan Nenek adalah...", 
-                jawaban: "4 tahun", 
-                pilihan: ["3 tahun", "4 tahun", "5 tahun", "6 tahun"] 
+                deskripsi: "Anak paling muda dari Mbah Kaum Ridwan adalah...", 
+                jawaban: "Mbah Jaril", 
+                pilihan: ["Mbah Ridho", "Mbah Jaril", "Mbah Saodah", "Mbah Kusniati"] 
             },
             { 
-                deskripsi: "Opa lahir di kota...", 
-                jawaban: "Bandung", 
-                pilihan: ["Depok", "Padang", "Bandung", "Kutoarjo"] 
+                deskripsi: "Asal kota Mbah Muhtadi adalah...", 
+                jawaban: "Kutoarjo", 
+                pilihan: ["Kutoarjo", "Purworejo", "Kebumen", "Sumpyuh"] 
             },
             { 
-                deskripsi: "Opa dan Nenek pertama kali bertemu di kota...", 
-                jawaban: "Padang", 
-                pilihan: ["Bandung", "Padang", "Bukittinggi", "Jakarta"] 
-            },
-            { 
-                deskripsi: "Saudara perempuan Nenek berjumlah… orang", 
-                jawaban: "4", 
-                pilihan: ["2", "3", "4", "5"] 
-            },
-            { 
-                deskripsi: "Saudara laki-laki Nenek berjumlah… orang", 
-                jawaban: "1", 
-                pilihan: ["1", "2", "3", "4"] 
-            },
-            { 
-                deskripsi: "Jumlah cucu Opa dan Nenek keseluruhannya ada ….. orang", 
-                jawaban: "9", 
-                pilihan: ["7", "8", "9", "10"] 
-            },
-            { 
-                deskripsi: "Nama ibu dari Nenek Wasnida adalah...", 
-                jawaban: "Ummama", 
-                pilihan: ["Ummi", "Ummama", "Ammi", "Ammah"] 
-            },
-            { 
-                deskripsi: "Tahun berapakah cucu nenek Hafeezha lahir?", 
-                jawaban: "2020", 
-                pilihan: ["2019", "2020", "2021", "2022"] 
-            },
-            { 
-                deskripsi: "Opa memiliki 4 orang anak. Yang lahirnya di padang...", 
-                jawaban: "Vika", 
-                pilihan: ["Reny", "Vika", "Yossi", "Dani"] 
-            },
-            { 
-                deskripsi: "Kalimat syahadat 'La ilaha illallah' berarti meyakini bahwa Allah adalah satu-satunya…. yang benar", 
-                jawaban: "Sesembahan", 
-                pilihan: ["Pencipta", "Sesembahan", "Penguasa", "Pengatur"] 
+                deskripsi: "Benarkah Mbah Muhtadi dulu pernah memiliki pabrik rokok?", 
+                jawaban: "Benar", 
+                pilihan: ["Benar", "Salah"] 
             },
             { 
                 deskripsi: "Idul Fitri secara harfiah (bahasa) artinya...", 
@@ -315,14 +277,24 @@
                 pilihan: ["Kembali berbuka", "Kembali suci", "Kembali bersih", "Kembali mulia"] 
             },
             { 
-                deskripsi: "Saat berwudhu dan membasuh kaki, salah satu hal berikut ini sifatnya tidak wajib (bukan rukun), yaitu...", 
-                jawaban: "Membasuh kaki hingga lutut", 
-                pilihan: ["Menyela jari-jari kaki dengan kelingking", "Membasuh kaki hingga mata kaki", "Membasuh kaki hingga lutut", "Mendahulukan kaki kanan atas kaki kiri"] 
+                deskripsi: "Kalimat syahadat 'La ilaha illallah' berarti meyakini bahwa Allah adalah satu-satunya... yang benar.", 
+                jawaban: "Sesembahan", 
+                pilihan: ["Pencipta", "Sesembahan", "Penguasa", "Pengatur"] 
+            },
+            { 
+                deskripsi: "Mbah Muhtadi pernah berprofesi/bekerja sebagai berikut, kecuali...", 
+                jawaban: "Jualan kelapa", 
+                pilihan: ["Jualan es limun", "Jualan rokok", "Jualan arang", "Jualan kelapa"] 
+            },
+            { 
+                deskripsi: "Nama saudara Mbah Ridwan yang tinggal di Ambarawa adalah...", 
+                jawaban: "Marzuki", 
+                pilihan: ["Slamet", "Marzuki", "Murjiono", "Hasyim"] 
             }
         ];
 
         let soalSaatIni; let jawabanBenar = false; let skorBenar = 0; let skorSalah = 0; 
-        let soalSudahDitampilkan = new Set(); let nomorSoal = 0; const totalSoal = 15; 
+        let soalSudahDitampilkan = new Set(); let nomorSoal = 0; const totalSoal = 10; // Disesuaikan menjadi 10
         let timerInterval = null; let timeLeft = 600; 
         let isGameOverSoundPlayed = false; let namaUser = "";
 
@@ -467,8 +439,8 @@
             let warnaSkor, komentar, gameOverSoundFile;
 
             if (skorAkhir < 60) { gameOverSoundFile = 'ast.mp3'; komentar = "Astaghfirullah....Kamu harus banyak ngobrol lagi sama nenek"; warnaSkor = "#ff6b6b"; }
-else if (skorAkhir <= 84) { gameOverSoundFile = 'alh.mp3'; komentar = "Alhamdulillah, Lumayan Lah"; warnaSkor = "#F5D061"; }
-else { gameOverSoundFile = 'masy.mp3'; komentar = "MasyaAllah, Kamu Anggota Keluarga Ronald Sejati! "; warnaSkor = "#51cf66"; }
+            else if (skorAkhir <= 84) { gameOverSoundFile = 'alh.mp3'; komentar = "Alhamdulillah, Lumayan Lah"; warnaSkor = "#F5D061"; }
+            else { gameOverSoundFile = 'masy.mp3'; komentar = "MasyaAllah, Kamu Anggota Keluarga Muhtadi Sejati! "; warnaSkor = "#51cf66"; }
 
             document.getElementById("judulGameAktif").textContent = "Kuis Selesai!";
             document.getElementById("timerContainer").style.display = "none";
